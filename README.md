@@ -65,3 +65,70 @@ Switched to branch 'dev'
 shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git branch -d test
 Deleted branch test (was 345053d).
 ```
+
+### Exercise 2
+
+```bash
+
+gymgukunda@Gukundas-iMac Gym-Git-Exercise-Solutions % git stash -u
+Saved working directory and index state WIP on dev: 02ce0c5 Update README.md
+
+gymgukunda@Gukundas-iMac Gym-Git-Exercise-Solutions % git stash -u
+Saved working directory and index state WIP on dev: 02ce0c5 Update README.md
+
+gymgukunda@Gukundas-iMac Gym-Git-Exercise-Solutions % git stash -u
+Saved working directory and index state WIP on dev: 02ce0c5 Update README.md
+
+gymgukunda@Gukundas-iMac Gym-Git-Exercise-Solutions % git stash pop stash@{1}
+Already up to date.
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+Dropped stash@{1} (463b460d46acdcb7a3e93a33264f8f9af60e958b)
+
+gymgukunda@Gukundas-iMac Gym-Git-Exercise-Solutions % git stash pop stash@{1}
+Already up to date.
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+        home.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+Dropped stash@{1} (ed3a09cfba98cddcce17ba3e3cddafb02521d74c)
+
+gymgukunda@Gukundas-iMac Gym-Git-Exercise-Solutions % git add . 
+
+gymgukunda@Gukundas-iMac Gym-Git-Exercise-Solutions % git commit -m 'Using stash to temporarly save files'
+[dev 0a9b3d7] Using stash to temporarly save files
+ 2 files changed, 78 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+gymgukunda@Gukundas-iMac Gym-Git-Exercise-Solutions % git push origin dev
+Enter passphrase for key '/Users/gymgukunda/.ssh/id_ed25519': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.33 KiB | 1.33 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
+   7fa7e55..0a9b3d7  dev -> dev
+
+gymgukunda@Gukundas-iMac Gym-Git-Exercise-Solutions % git stash pop stash@{0}
+Already up to date.
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+Dropped stash@{0} (fa762631a277c1cab058f55cca02668dd75ca4c9)
+
+gymgukunda@Gukundas-iMac Gym-Git-Exercise-Solutions % git reset
+
+```
