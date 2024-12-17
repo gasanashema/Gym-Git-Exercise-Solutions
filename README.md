@@ -3,6 +3,8 @@
 ## Bundle 1
 ### Exercise 1
 
+
+```bash
 shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git init
 hint: Using 'master' as the name for the initial branch. This default branch name
 hint: is subject to change. To configure the initial branch name to use in all
@@ -62,3 +64,4 @@ Switched to branch 'dev'
 
 shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git branch -d test
 Deleted branch test (was 345053d).
+```
