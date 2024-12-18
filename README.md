@@ -219,3 +219,53 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
    dc53444..0ddb8c0  ft/service-redesign -> ft/service-redesign
      ```
+
+
+
+## Bundle 4
+### Exercise 1
+
+```bash
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git checkout main
+Switched to branch 'main'
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git remote add git-copy git@github.com:gasanashema/Gym-git-copy.git
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git remote -v
+git-copy        git@github.com:gasanashema/Gym-git-copy.git (fetch)
+git-copy        git@github.com:gasanashema/Gym-git-copy.git (push)
+origin  git@github.com:gasanashema/Gym-Git-Exercise-Solutions.git (fetch)
+origin  git@github.com:gasanashema/Gym-Git-Exercise-Solutions.git (push)
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ echo "<p>Updated Home Page</p>" >> index.html
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ echo "<p>Updated Home Page</p>" >> home.html
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git add .
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git commit -m "Updated the home page content"
+[main fd3a016] Updated the home page content
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git push origin main
+ssh: connect to host ssh.github.com port 443: Connection timed out
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 321 bytes | 321.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
+   af8116e..fd3a016  main -> main
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git push git-copy main
+Enumerating objects: 41, done.
+Counting objects: 100% (41/41), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (39/39), done.
+Writing objects: 100% (41/41), 9.72 KiB | 1.39 MiB/s, done.
+Total 41 (delta 17), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (17/17), done.
+To github.com:gasanashema/Gym-git-copy.git
+ * [new branch]      main -> main
+
+```
+
