@@ -171,3 +171,35 @@ To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 
 ```
+
+### Exercise 2
+
+```bash
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git branch
+  dev
+  ft/service-redesign
+* main
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git diff main
+diff --git a/services.html b/services.html
+index 700096b..b50c01d 100644
+--- a/services.html
++++ b/services.html
+@@ -25,11 +25,7 @@
+       <button type="button" class="btn btn-dark my-4" id="button">Dark</button>
+ 
+ 
+-      <article id="content">
+-        <p>Brownie lollipop <span>carrot cake</span> gummies lemon drops sweet roll dessert tiramisu. Pudding muffin <
+span>cotton candy</span> croissant fruitcake tootsie roll. Jelly jujubes brownie. Marshmallow jujubes topping sugar plu
+m jelly jujubes chocolate.</p>
+-        
+-        <p>Tart bonbon soufflé gummi bears. Donut marshmallow <span>gingerbread cupcake</span> macaroon jujubes muffin. Soufflé candy caramels tootsie roll powder sweet roll brownie <span>apple pie</span> gummies. Fruitcake danish chocolate tootsie roll macaroon.</p>
+-      </article>
++      
+     </div>
+
+     shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git merge main
+Already up to date.
+     ```
