@@ -202,4 +202,20 @@ m jelly jujubes chocolate.</p>
 
      shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git merge main
 Already up to date.
+
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git add .
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git commit -m "conflicts resolved"
+[ft/service-redesign 0ddb8c0] conflicts resolved
+ 1 file changed, 33 insertions(+), 1 deletion(-)
+
+ shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 877 bytes | 877.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
+   dc53444..0ddb8c0  ft/service-redesign -> ft/service-redesign
      ```
