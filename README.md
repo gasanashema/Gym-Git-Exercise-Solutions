@@ -268,4 +268,36 @@ To github.com:gasanashema/Gym-git-copy.git
  * [new branch]      main -> main
 
 ```
+## Bundle 4
+### Exercise 2
 
+```bash
+
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git add .
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git commit -m "added changes on this branch"
+[ft/footer 58a4ff5] added changes on this branch
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git add .
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git commit -m "added another changes on this branch and I am going to make the second commit"
+[ft/footer 8457cea] added another changes on this branch and I am going to make the second commit
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git push origin ft/footer
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 905 bytes | 905.00 KiB/s, done.
+Total 9 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/gasanashema/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote: 
+To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ 
+
+
+```
