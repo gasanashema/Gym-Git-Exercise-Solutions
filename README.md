@@ -298,6 +298,34 @@ remote:
 To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/footer -> ft/footer
 shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ 
-
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git checkout main
+M       README.md
+Switched to branch 'main'
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git merge --squash ft/footer
+Updating 8ee7d77..30167bb
+Fast-forward
+Squash commit -- not updating HEAD
+ home.html | 10 ++++------
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git commit -m "Footer changes squashing"
+[ft/squashing b07bda5] Footer changes squashing
+ 2 files changed, 36 insertions(+), 6 deletions(-)
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git push origin ft/squashing
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 744 bytes | 744.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/gasanashema/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote: 
+To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ 
 
 ```
