@@ -219,7 +219,9 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
    dc53444..0ddb8c0  ft/service-redesign -> ft/service-redesign
 
-   ```
+
+```
+
 
 ## Bundle 3
 ### Exercise 1
@@ -405,6 +407,173 @@ hint: before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ 
 
+
+```
+
+
+### Exercise 2
+
+```bash
+
+  shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git branch
+  dev
+  ft/contact-page
+  ft/faq-page
+  ft/service-redesign
+* ft/team-page
+  main
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git checkout main
+Switched to branch 'main'
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git add .
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git commit -m 'changed home.html'
+[main af8116e] changed home.html
+ 1 file changed, 2 insertions(+)
+ shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git push -f origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 323 bytes | 323.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
+ + ed5bc85...af8116e main -> main (forced update)
+ 
+ shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git add home.html 
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git commit -m ' modified home on home-page-redesign branch'
+[ft/home-page-redesign 8979ead]  modified home on home-page-redesign branch
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git push origin ft/home-page-redesign
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.55 KiB | 1.55 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/gasanashema/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote: 
+To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ 
+
+ ```
+
+## Bundle 4
+### Exercise 1
+
+```bash
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git checkout main
+Switched to branch 'main'
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git remote add git-copy git@github.com:gasanashema/Gym-git-copy.git
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git remote -v
+git-copy        git@github.com:gasanashema/Gym-git-copy.git (fetch)
+git-copy        git@github.com:gasanashema/Gym-git-copy.git (push)
+origin  git@github.com:gasanashema/Gym-Git-Exercise-Solutions.git (fetch)
+origin  git@github.com:gasanashema/Gym-Git-Exercise-Solutions.git (push)
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ echo "<p>Updated Home Page</p>" >> index.html
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ echo "<p>Updated Home Page</p>" >> home.html
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git add .
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git commit -m "Updated the home page content"
+[main fd3a016] Updated the home page content
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git push origin main
+ssh: connect to host ssh.github.com port 443: Connection timed out
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 321 bytes | 321.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
+   af8116e..fd3a016  main -> main
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git push git-copy main
+Enumerating objects: 41, done.
+Counting objects: 100% (41/41), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (39/39), done.
+Writing objects: 100% (41/41), 9.72 KiB | 1.39 MiB/s, done.
+Total 41 (delta 17), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (17/17), done.
+To github.com:gasanashema/Gym-git-copy.git
+ * [new branch]      main -> main
+
+```
+## Bundle 4
+### Exercise 2
+
+```bash
+
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git add .
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git commit -m "added changes on this branch"
+[ft/footer 58a4ff5] added changes on this branch
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git add .
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git commit -m "added another changes on this branch and I am going to make the second commit"
+[ft/footer 8457cea] added another changes on this branch and I am going to make the second commit
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git push origin ft/footer
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 905 bytes | 905.00 KiB/s, done.
+Total 9 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/gasanashema/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote: 
+To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ 
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git checkout main
+M       README.md
+Switched to branch 'main'
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git merge --squash ft/footer
+Updating 8ee7d77..30167bb
+Fast-forward
+Squash commit -- not updating HEAD
+ home.html | 10 ++++------
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git commit -m "Footer changes squashing"
+[ft/squashing b07bda5] Footer changes squashing
+ 2 files changed, 36 insertions(+), 6 deletions(-)
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ git push origin ft/squashing
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 744 bytes | 744.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/gasanashema/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote: 
+To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ 
 
 
 ```
