@@ -219,7 +219,9 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:gasanashema/Gym-Git-Exercise-Solutions.git
    dc53444..0ddb8c0  ft/service-redesign -> ft/service-redesign
 
+
 ```
+
 
 ## Bundle 3
 ### Exercise 1
@@ -404,7 +406,6 @@ hint: counterpart. If you want to integrate the remote changes, use 'git pull'
 hint: before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 shema@shema:~/New Volume data/The Gym/Gym-Git-Exercise-Solutions$ 
-
 
 
 ```
